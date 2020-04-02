@@ -1,0 +1,11 @@
+.text__small {
+  font-size: 11px;
+}
+
+.text__white {
+  color: #fff;
+}
+
+p {
+  margin-bottom: 15px;
+}

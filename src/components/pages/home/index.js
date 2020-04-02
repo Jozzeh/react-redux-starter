@@ -1,21 +1,11 @@
 import React from "react";
 import "./home.style.css";
+import Intro from "../../blocks/home/Intro";
 
 const Home = () => {
   return (
     <section className="home">
-      <h1>Home</h1>
-      <p>This is a starters project. It encompasses some items, such as: </p>
-      <ul>
-        <li>React & Redux</li>
-        <li>Component folder structure</li>
-        <li>Redux folder structure</li>
-        <li>Basic testing</li>
-      </ul>
-      <p className="small">
-        Please note that pages can be filled with only elements if blocks are
-        not applicable.
-      </p>
+      <Intro/>
       <h2>BEM methodology (CSS)</h2>
       <p>
         To style components, this project uses the BEM methodology. This method

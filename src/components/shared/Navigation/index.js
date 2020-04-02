@@ -22,7 +22,6 @@ const Navigation = props => {
     }
   }, [location, props]);
   
-
   return (
     <header>
       <div className="logo">
