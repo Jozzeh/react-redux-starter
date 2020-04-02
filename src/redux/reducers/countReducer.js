@@ -2,17 +2,18 @@ import produce from 'immer';
 
 // Initial State
 export const initialState = {
-  menu: {
-    active: '/'
-  }
+  count: 1
 };
 // Reducers (Modifies The State And Returns A New State)
-const MenuReducer = (previousState = initialState, action) => {
+const CountReducer = (previousState = initialState, action) => {
   return produce(previousState, newState => {
     switch (action.type) {
-      // Start test
-      case 'SET_ACTIVE_MENU': {
-        newState.menu.active = action.active;
+      case 'INCREMENT_COUNTER': {
+        newState.count = previousState.count++;
+        return newState;
+      }
+      case 'DECREMENT_COUNTER': {
+        newState.count = previousState.count--;
         return newState;
       }
       // Default
@@ -24,4 +25,4 @@ const MenuReducer = (previousState = initialState, action) => {
   
 };
 // Exports
-export default MenuReducer;
+export default CountReducer;

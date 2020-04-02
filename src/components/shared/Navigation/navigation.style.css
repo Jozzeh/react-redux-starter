@@ -23,7 +23,7 @@ nav {
   color: #000;
   text-decoration: none;
 }
-.nav__item a:hover, .nav__item-selected{
+.nav__item a:hover, .nav__item--selected{
   text-decoration: underline;
 }
 

@@ -29,7 +29,7 @@ const persistConfig = {
   storage: storage,
   // Whitelist (Save Specific Reducers)
   whitelist: [
-    'exampleReducer',
+    'CountReducer',
   ],
   // Blacklist (Don't Save Specific Reducers)
   blacklist: [],

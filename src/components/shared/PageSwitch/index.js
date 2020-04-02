@@ -3,7 +3,7 @@ import "./pageSwitch.style.css";
 
 import { Switch, Route } from "react-router-dom";
 
-import Home from "../../pages/home";
+import Home from "../../pages/Home";
 
 const PageSwitch = () => {
   return (
