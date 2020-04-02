@@ -2,9 +2,15 @@
 import React from "react";
 import "./list.style.css";
 
+import PropTypes from 'prop-types';
+
 const ListItem = props => {
   const { content } = props;
   return <li className="list__item">{content}</li>;
 };
+
+ListItem.propTypes = {
+  content: PropTypes.string.isRequired
+}
 
 export default ListItem;

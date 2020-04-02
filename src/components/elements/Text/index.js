@@ -2,6 +2,8 @@
 import React from "react";
 import "./text.style.css";
 
+import PropTypes from 'prop-types';
+
 // IS THIS REALLY NECESSAIRY?
 // No, but React Native has specific text components...
 
@@ -12,13 +14,13 @@ const Text = props => {
     return (
       <p
         {...rest}
-        className={className + "text"}
+        className={className ? className : ""}
         dangerouslySetInnerHTML={{ __html: html }}
       ></p>
     );
   } else if (content) {
     return (
-      <p {...rest} className={className + "text"}>
+      <p {...rest} className={className ? className : ""}>
         {content}
       </p>
     );
@@ -26,5 +28,11 @@ const Text = props => {
     return <p></p>;
   }
 };
+
+Text.propTypes = {
+  className: PropTypes.string,
+  html: PropTypes.string,
+  content: PropTypes.string
+}
 
 export default Text;

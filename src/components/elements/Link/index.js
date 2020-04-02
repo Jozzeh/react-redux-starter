@@ -2,6 +2,8 @@
 import React from "react";
 import "./link.style.css";
 
+import PropTypes from 'prop-types';
+
 const Link = props => {
   const { target, url, content, className, ...rest } = props;
 
@@ -9,13 +11,19 @@ const Link = props => {
     <a
       {...rest}
       href={url}
-      target={target}
+      target={target ? target : "_self"}
       rel={target === "_blank" ? "noopener noreferrer" : ""}
-      className={className + " link"}
+      className={className ? className + " link" : "link"}
     >
       {content}
     </a>
   );
 };
+
+Link.propTypes = {
+  url: PropTypes.string.isRequired,
+  target: PropTypes.string,
+  className: PropTypes.string
+}
 
 export default Link;

@@ -2,15 +2,17 @@
 import React from "react";
 import "./list.style.css";
 
+import PropTypes from 'prop-types';
+
 import ListItem from "./listitem";
 
 const List = props => {
-  const { items, itemClassName, type, className, ...rest } = props;
+  const { items, type, className, ...rest } = props;
 
   if (Array.isArray(items)) {
     if (type === "ol") {
       return (
-        <ol className={className + " ordened-list list"} {...rest}>
+        <ol className={className ? className + " ordened-list" : "ordened-list"} {...rest}>
           {items.forEach((element, index) => {
             return <ListItem key={index} content={element} />;
           })}
@@ -18,7 +20,7 @@ const List = props => {
       );
     } else {
       return (
-        <ul className={className + " unordened-list list"} {...rest}>
+        <ul className={className ? className + " unordened-list" : "unordened-list"} {...rest}>
           {items.map((element, index) => {
             return <ListItem key={index} content={element} />;
           })}
@@ -29,5 +31,11 @@ const List = props => {
     return <p>No items are defined...</p>;
   }
 };
+
+List.propTypes = {
+  type: PropTypes.string.isRequired,
+  items: PropTypes.array.isRequired,
+  className: PropTypes.string,
+}
 
 export default List;
