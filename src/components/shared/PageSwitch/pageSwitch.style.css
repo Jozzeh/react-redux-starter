@@ -1,0 +1,23 @@
+main {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+
+.main__container {
+  min-width: 100vw;
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 710px) {
+  main {
+    flex-wrap: nowrap;
+  }
+
+  .main__container {
+    width: 680px;
+    min-width: auto;
+    padding: 0;
+  }
+}
