@@ -1,6 +1,6 @@
 // first import react and the (optional) style file.
 import React from "react";
-import "./text_Style.css";
+import "./text.style.css";
 
 import PropTypes from 'prop-types';
 

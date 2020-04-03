@@ -1,20 +1,13 @@
 import React from "react";
-import "./home_Style.css";
+import "./home.style.css";
 import Intro from "../../blocks/home/Intro";
+import Bem from "../../blocks/home/Bem";
 
 const Home = () => {
   return (
     <section className="home">
       <Intro/>
-      <h2>BEM methodology (CSS)</h2>
-      <p>
-        To style components, this project uses the BEM methodology. This method
-        is complementairy with our folder structure and certain component
-        libraries.
-      </p>
-      <a href="https://en.bem.info/" target="_blank" rel="noopener noreferrer">
-        More information about BEM
-      </a>
+      <Bem />
       <h2>Redux async fetch call</h2>
       <p>Here's a chuck norris quote to brighten your day...</p>
       <p>""</p>

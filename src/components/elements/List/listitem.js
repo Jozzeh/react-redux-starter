@@ -1,6 +1,6 @@
 // first import react and the (optional) style file.
 import React from "react";
-import "./listItem_Style.css";
+import "./listItem.style.css";
 
 import PropTypes from 'prop-types';
 

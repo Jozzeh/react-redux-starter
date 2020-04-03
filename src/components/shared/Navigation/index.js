@@ -1,6 +1,6 @@
 // first import react, (optional) style file & assets.
 import React, { useEffect } from "react";
-import "./navigation_Style.css";
+import "./navigation.style.css";
 import ReactLogo from "../../../assets/images/logo.svg";
 import ReduxLogo from "../../../assets/images/reduxlogo.png";
 
