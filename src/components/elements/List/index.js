@@ -1,10 +1,10 @@
 // first import react and the (optional) style file.
 import React from "react";
-import "./list.style.css";
+import "./list_Style.css";
 
 import PropTypes from 'prop-types';
 
-import ListItem from "./listitem";
+import ListItem from "./listItem";
 
 const List = props => {
   const { items, type, className, ...rest } = props;

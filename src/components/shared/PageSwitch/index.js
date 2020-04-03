@@ -1,5 +1,5 @@
 import React from "react";
-import "./pageSwitch.style.css";
+import "./pageSwitch_Style.css";
 
 import { Switch, Route } from "react-router-dom";
 
