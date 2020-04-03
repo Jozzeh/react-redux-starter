@@ -1,0 +1,39 @@
+.btn {
+  padding: 10px 15px;
+  border-radius: 2px;
+  border: solid 1px #ccc;
+  background-color: transparent;
+  color: #000;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 15px;
+  outline: transparent;
+}
+
+.btn__fluid {
+  width: 100%;
+}
+
+.btn__disabled {
+  opacity: 0.5;
+}
+
+.btn__success {
+  color: #fff;
+  background-color: #21f392;
+}
+
+.btn__primary {
+  color: #fff;
+  background-color: #2196f3;
+}
+
+.btn__danger {
+  color: #fff;
+  background-color: #f44336;
+}
+
+.btn_accent {
+  color: #fff;
+  background-color: #ff4081;
+}

@@ -2,16 +2,14 @@ import React from "react";
 import "./home.style.css";
 import Intro from "../../blocks/home/Intro";
 import Bem from "../../blocks/home/Bem";
+import Chuck from "../../blocks/home/Chuck";
 
 const Home = () => {
   return (
     <section className="home">
       <Intro/>
       <Bem />
-      <h2>Redux async fetch call</h2>
-      <p>Here's a chuck norris quote to brighten your day...</p>
-      <p>""</p>
-      chuck norris random button
+      <Chuck />
       <h2>Redux inpersistence</h2>
       <p>
         The menu has a redux reducer, but this is not persisted.

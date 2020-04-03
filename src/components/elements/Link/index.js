@@ -11,9 +11,9 @@ const Link = props => {
     <a
       {...rest}
       href={href}
-      target={target ? target : "_self"}
+      target={target}
       rel={target === "_blank" ? "noopener noreferrer" : ""}
-      className={className ? className + " link" : "link"}
+      className={className + " link"}
     >
       {content}
     </a>
@@ -24,6 +24,11 @@ Link.propTypes = {
   href: PropTypes.string.isRequired,
   target: PropTypes.string,
   className: PropTypes.string
+}
+
+Link.defaultProps = {
+  target: "_self",
+  className: ""
 }
 
 export default Link;

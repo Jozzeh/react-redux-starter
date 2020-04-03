@@ -2,7 +2,8 @@
 // The reason this is in a seperate file is because it is common to add certain headers to each call (example: api key headers)
 
 // EXAMPLE
-import merge from 'merge';
+import merge from "merge";
+import axios from "axios";
 
 class Client {
   options = {
@@ -15,12 +16,22 @@ class Client {
     this.options = options;
   }
 
-  call = (route, options = this.options) => {
+  call = (options = this.options) => {
     let mergedOptions = merge(options, this.options);
 
-    console.log(`Start call: ${route} ----------------------------------`);
+    console.log(`Start call: ----------------------------------`);
     console.log(mergedOptions);
-    return fetch(`${route}`, mergedOptions)
+    return axios(mergedOptions)
+      .then(response => {
+        console.log(response);
+        return new Promise((resolve, reject) => {
+          resolve(response);
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    /*
       .then(response => {
         if (response.status === 204) {
           return { statusCode: response.status, json: [] };
@@ -34,26 +45,27 @@ class Client {
           resolve(response);
         });
       });
+      */
   };
 
-  get = (route, options) => {
-    return this.call(route, merge(options, { method: "GET" }));
+  get = (route, options = {}) => {
+    return this.call(merge(options, { method: "get", url: route }));
   };
 
-  post = (route, options) => {
-    return this.call(route, merge(options, { method: "POST" }));
+  post = (route, options = {}) => {
+    return this.call(merge(options, { method: "post", url: route }));
   };
 
-  delete = (route, options) => {
-    return this.call(route, merge(options, { method: "DELETE" }));
+  delete = (route, options = {}) => {
+    return this.call(merge(options, { method: "delete", url: route }));
   };
 
-  patch = (route, options) => {
-    return this.call(route, merge(options, { method: "PATCH" }));
+  patch = (route, options = {}) => {
+    return this.call(merge(options, { method: "patch", url: route }));
   };
 
-  put = (route, options) => {
-    return this.call(route, merge(options, { method: "PUT" }));
+  put = (route, options = {}) => {
+    return this.call(merge(options, { method: "put", url: route }));
   };
 }
 

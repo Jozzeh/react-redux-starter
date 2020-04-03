@@ -7,34 +7,51 @@ import PropTypes from 'prop-types';
 const Title = props => {
   const { type, html, content, className, ...rest } = props;
 
-  switch (type) {
-    case "h3" && html: {
-      return (<h3 {...rest} className={className ? className : ""} dangerouslySetInnerHTML={{"__html": html}}></h3>);
+  if (content) {
+    switch (type) {
+      case "h3": {
+        return (<h3 {...rest} className={className}>{content}</h3>);
+      }
+      case "h2": {
+        return (<h2 {...rest} className={className}>{content}</h2>);
+      }
+      case "h1": {
+        return (<h1 {...rest} className={className}>{content}</h1>);
+      }
+      default: {
+        return (<h1 {...rest} className={className}>{content}</h1>);
+      }
     }
-    case "h3" && content: {
-      return (<h3 {...rest} className={className ? className : ""}>{content}</h3>);
+  } else if (html) {
+    switch (type) {
+      case "h3": {
+        return (<h3 {...rest} className={className} dangerouslySetInnerHTML={{"__html": html}}></h3>);
+      }
+      case "h2": {
+        return (<h2 {...rest} className={className} dangerouslySetInnerHTML={{"__html": html}}></h2>);
+      }
+      case "h1": {
+        return (<h1 {...rest} className={className} dangerouslySetInnerHTML={{"__html": html}}></h1>);
+      }
+      default: {
+        return (<h1 {...rest} className={className} dangerouslySetInnerHTML={{"__html": html}}></h1>);
+      }
     }
-    case "h2" && html: {
-      return (<h2 {...rest} className={className ? className : ""} dangerouslySetInnerHTML={{"__html": html}}></h2>);
-    }
-    case "h2" && content: {
-      return (<h2 {...rest} className={className ? className : ""}>{content}</h2>);
-    }
-
-    case "h1" && html: {
-      return (<h1 {...rest} className={className ? className : ""} dangerouslySetInnerHTML={{"__html": html}}></h1>);
-    }
-    default: {
-      return (<h1 {...rest} className={className ? className : ""}>{content}</h1>);
-    }
+  } else {
+    return (<h1>No content provided</h1>);
   }
 };
 
 Title.propTypes = {
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
   content: PropTypes.string,
   html: PropTypes.string,
   className: PropTypes.string
+}
+
+Title.defaultProps = {
+  type: "h1",
+  className: ""
 }
 
 export default Title;

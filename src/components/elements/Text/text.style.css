@@ -1,3 +1,7 @@
+.text {
+  margin-bottom: 15px;
+}
+
 .text__small {
   font-size: 11px;
 }
@@ -6,6 +10,20 @@
   color: #fff;
 }
 
-p {
-  margin-bottom: 15px;
+.text__quote::before{
+  content: '"';
+  font-size: 40px;
+  color: #ccc;
+  font-family: serif, 'Times New Roman', Times, Georgia;
+}
+.text__quote {
+  color: rgb(230, 200, 67);
+  font-weight: bold;
+  font-size: 16px;
+}
+.text__quote::after{
+  content: '"';
+  font-size: 40px;
+  color: #ccc;
+  font-family: serif, 'Times New Roman', Times, Georgia;
 }

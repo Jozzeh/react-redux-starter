@@ -1,14 +1,23 @@
 // this file holds the logic to dispatch the action before, during and after a call has been initialised.
 
-// EXAMPLE
-export const createAction = 
-  (beforeType, successType, errorType, fn) => (...args) => (dispatch) => {
-    dispatch({ type: beforeType, payload: args })
-    return Promise.resolve(fn(...args))
-      .then(payload => dispatch({ type: successType, payload }))
-      .catch(payload => dispatch({ type: errorType, payload }));
-      
+export function createAsyncAction({
+  asyncRequest,
+  requestType,
+  requestPayload,
+  successType,
+  failureType,
+}) {
+  return dispatch => {
+    console.log('getter 2 random quote');
+    dispatch({type: requestType, payload: requestPayload});
+     asyncRequest()
+      .then(data => {
+        dispatch({type: successType, payload: data, requestPayload})
+      }).catch(error => {
+        dispatch({type: failureType, payload: requestPayload});
+      })
   };
+};
 
  // SHOULD BE USED AS
  /*

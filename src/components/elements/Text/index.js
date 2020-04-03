@@ -14,13 +14,13 @@ const Text = props => {
     return (
       <p
         {...rest}
-        className={className ? className : ""}
+        className={className + " text"}
         dangerouslySetInnerHTML={{ __html: html }}
       ></p>
     );
   } else if (content) {
     return (
-      <p {...rest} className={className ? className : ""}>
+      <p {...rest} className={className + " text"}>
         {content}
       </p>
     );
@@ -33,6 +33,10 @@ Text.propTypes = {
   className: PropTypes.string,
   html: PropTypes.string,
   content: PropTypes.string
+}
+
+Text.defaultProps = {
+  className: ""
 }
 
 export default Text;
