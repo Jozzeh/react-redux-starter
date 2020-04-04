@@ -5,6 +5,7 @@ import "./chuck.style.css";
 import { connect } from "react-redux";
 import ChuckActions from "../../../../redux/actions/chuckActions";
 
+import Panel from "../../../elements/Panel";
 import Title from "../../../elements/Title";
 import Text from "../../../elements/Text";
 import Button from "../../../elements/Button";
@@ -21,13 +22,13 @@ const Chuck = props => {
   }
 
   return (
-    <div className="chuck">
+    <Panel className="chuck">
       <Title type="h2" content="Redux async API call"/>
       <Text content="Here's a chuck norris quote to brighten your day..."/>
       <Text className="text__small" content="+ it shows how an API call is made using redux thunk + actions and reducers..."/>
       <Text className="text__quote" content={props.quotes.standard}/>
       <Button color="btn__primary" onClick={value => handleClick(value)}>Load a new quote</Button> 
-    </div>
+    </Panel>
   );
 };
 
