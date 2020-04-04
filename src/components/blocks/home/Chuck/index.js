@@ -26,7 +26,7 @@ const Chuck = props => {
       <Title type="h2" content="Redux async API call"/>
       <Text content="Here's a chuck norris quote to brighten your day..."/>
       <Text className="text__small" content="+ it shows how an API call is made using redux thunk + actions and reducers..."/>
-      <Text className="text__quote" content={props.quotes.standard}/>
+      <Text className="text__quote" html={props.quotes.standard}/>
       <Button color="btn__primary" onClick={value => handleClick(value)}>Load a new quote</Button> 
     </Panel>
   );
