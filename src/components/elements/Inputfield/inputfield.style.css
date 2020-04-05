@@ -1,0 +1,19 @@
+.inputfield__explanation {
+  font-size: 11px;
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 10px;
+  width: 100%;
+  min-height: 10px;
+  display: inline-block;
+}
+
+.inputfield {
+  width: 100%;
+  display: block;
+  padding: 8px 16px;
+  border: none;
+  box-shadow: none;
+  background-color: #f1f1f1;
+  border-bottom: solid 2px #2196f3;
+}

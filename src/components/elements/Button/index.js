@@ -5,7 +5,7 @@ import "./button.style.css";
 import PropTypes from "prop-types";
 
 const Button = props => {
-  const { color, size, disabled, fluid, icon, onClick, clickValue, ...rest } = props;
+  const { type, content, color, size, disabled, fluid, icon, onClick, clickValue, ...rest } = props;
 
   const classNames = ["btn", size, color];
   if (disabled) {
@@ -19,19 +19,37 @@ const Button = props => {
     props.onClick(value);
   }
 
-  return (
-    <button
-      disabled={disabled}
-      className={classNames.join(" ")}
-      onClick={() => handleClick(clickValue)}
-      {...rest}
-    >
-      {icon ? <img src={icon} alt="" /> : ""} {props.children}
-    </button>
-  );
+  if(type !== "form"){
+    return (
+      <input type={type}
+        disabled={disabled}
+        className={classNames.join(" ")}
+        onClick={() => handleClick(clickValue)}
+        {...rest}
+        value={icon ? <img src={icon} alt="" /> + " " : "" + props.content}
+      />
+    );
+  } else {
+    return (
+      <button type="button"
+        disabled={disabled}
+        className={classNames.join(" ")}
+        onClick={() => handleClick(clickValue)}
+        {...rest}
+      >{icon ? <img src={icon} alt="" /> : ""} {props.content}</button>
+    );
+  }
+  
 };
 
 Button.propTypes = {
+  content: PropTypes.string.isRequired,
+  type: PropTypes.oneOf([
+    "button",
+    "submit",
+    "reset",
+    "form"
+  ]).isRequired,
   /**
    * Defines the button color, can be `btn__primary`, `btn__accent`, `btn__success`, `btn__danger`
    */

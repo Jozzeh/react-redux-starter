@@ -11,8 +11,10 @@ const getRandomQuote = () => {
 };
 
 const getSpecificQuote = (firstname, lastname) => {
-  const specificChuckLink = Links.chuckApi.replace("Chuck", firstname).replace("Norris", lastname);
-  return getClient().get(specificChuckLink);
+  console.log(lastname);
+  const specificChuckLink = Links.chuckApi.replace("Chuck", firstname);
+  const specificChuck = specificChuckLink.replace("Norris", lastname);
+  return getClient().get(specificChuck);
 };
 
 const chuckClient = {
