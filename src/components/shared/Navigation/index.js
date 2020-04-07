@@ -34,8 +34,17 @@ const Navigation = props => {
           <li className={props.menu.active === "/" ? "nav__item--selected nav__item" : "nav__item"}>
             <Link onClick={() => {props.setActiveMenu("/")}} to="/">Home</Link>
           </li>
-          <li className={props.menu.active === "/contact" ? "nav__item--selected nav__item" : "nav__item"}>
-            <Link onClick={() => {props.setActiveMenu("/contact")}} to="/contact">Contact</Link>
+          <li className={props.menu.active === "/structure" ? "nav__item--selected nav__item" : "nav__item"}>
+            <Link onClick={() => {props.setActiveMenu("/structure")}} to="/structure">Structure</Link>
+          </li>
+          <li className={props.menu.active === "/css" ? "nav__item--selected nav__item" : "nav__item"}>
+            <Link onClick={() => {props.setActiveMenu("/css")}} to="/css">CSS</Link>
+          </li>
+          <li className={props.menu.active === "/redux" ? "nav__item--selected nav__item" : "nav__item"}>
+            <Link onClick={() => {props.setActiveMenu("/redux")}} to="/redux">State</Link>
+          </li>
+          <li className={props.menu.active === "/testing" ? "nav__item--selected nav__item" : "nav__item"}>
+            <Link onClick={() => {props.setActiveMenu("/testing")}} to="/testing">Testing</Link>
           </li>
         </ul>
       </nav>

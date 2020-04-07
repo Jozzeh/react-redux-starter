@@ -10,7 +10,10 @@ const PageSwitch = () => {
     <main>
       <div className="main__container">
         <Switch>
-          <Route path="/contact">contact</Route>
+          <Route path="/testing">testing</Route>
+          <Route path="/redux">state</Route>
+          <Route path="/css">css</Route>
+          <Route path="/structure">structure</Route>
           <Route path="/">
             <Home />
           </Route>
