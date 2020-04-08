@@ -158,17 +158,20 @@ const Intro = (props) => {
         href="https://immerjs.github.io/immer/docs/introduction"
         content="Immer documentation"
       />
-      
+
       <Title type="h3" content="Object merging" />
       <Text content="Merge is used to merge objects. In this kit, it is used when data comes back from external API's." />
       <Link
         target="_blank"
-        href="https://immerjs.github.io/immer/docs/introduction"
-        content="Merge page"
+        href="https://www.npmjs.com/package/merge"
+        content="Merge package"
       />
 
-      
-      
+      <Title type="h3" content="Redux" />
+      <Text content="Managing state can be done in a couple of ways. Why Redux is explained on the Redux state page..." />
+      <Title type="h3" content="Testing with Jest" />
+      <Text content="Jest is the standard unit testing platform installed with react. If needed enzyme or cypress can be added, but this project does not have those libraries." />
+
       <Text
         className="text__small"
         content="Please note that pages can be filled with only elements if blocks are not applicable."
