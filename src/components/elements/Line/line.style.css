@@ -1,0 +1,28 @@
+.horizontalparent {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+hr {
+  border-bottom: solid 1px #f1f1f1;
+  display: inline-block;
+}
+
+.horizontalline__thick{
+  border-bottom: solid 2px #f1f1f1;
+}
+
+.horizontalline__double {
+  border-bottom: solid double #f1f1f1;
+}
+
+.horizontalline__invert {
+  border-color: #222222;
+}
+
+.horizontalline__small {
+  width: 100px;
+}
+.horizontalline__medium {
+  width: 50%;
+}

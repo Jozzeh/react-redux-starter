@@ -8,6 +8,13 @@ const Title = (props) => {
   const { type, content, className, ...rest } = props;
 
   switch (type) {
+    case "h4": {
+      return (
+        <h4 {...rest} className={className}>
+          {content}
+        </h4>
+      );
+    }
     case "h3": {
       return (
         <h3 {...rest} className={className}>

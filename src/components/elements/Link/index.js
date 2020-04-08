@@ -23,12 +23,14 @@ const Link = props => {
 Link.propTypes = {
   href: PropTypes.string.isRequired,
   target: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  content: PropTypes.string
 }
 
 Link.defaultProps = {
   target: "_self",
-  className: ""
+  className: "",
+  content: ""
 }
 
 export default Link;

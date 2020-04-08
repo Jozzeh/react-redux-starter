@@ -1,0 +1,11 @@
+.flex-section {
+  display: flex;
+  width: 100%;;
+}
+
+.flex-section__nowrap {
+  flex-wrap: nowrap;
+}
+.flex-section__wrap {
+  flex-wrap: wrap;
+}

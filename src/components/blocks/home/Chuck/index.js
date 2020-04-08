@@ -12,6 +12,7 @@ import Form from "../../../elements/Form";
 import Button from "../../../elements/Button";
 import Label from "../../../elements/Label";
 import Inputfield from "../../../elements/Inputfield";
+import Flex from "../../../elements/Flex";
 
 const Chuck = (props) => {
   const [firstname, setFirstname] = useState("");
@@ -46,7 +47,7 @@ const Chuck = (props) => {
         onClick={(value) => handleClick(value)}
       />
       <Form onSubmit={() => handleFormSubmit()}>
-        <section className="flex-section">
+        <Flex>
           <div className="flex-section__half">
             <Label labelFor="firstname">First name</Label>
             <Inputfield
@@ -65,7 +66,8 @@ const Chuck = (props) => {
               onChange={(value) => setLastname(value)}
             />
           </div>
-        </section>
+        </Flex>
+
         <Button
           content="Load a quote with the name above"
           type="form"

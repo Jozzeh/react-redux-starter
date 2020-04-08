@@ -7,7 +7,7 @@ h1::after, h2::after, h3::after {
   left: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   position: relative;
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -24,6 +24,6 @@ h2 {
   font-size: 18px;
 }
 
-h3 {
+h3, h4 {
   font-weight: bold;
 }
