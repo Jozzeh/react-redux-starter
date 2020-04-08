@@ -12,7 +12,7 @@ const PageSwitch = () => {
         <Switch>
           <Route path="/testing">testing</Route>
           <Route path="/redux">state</Route>
-          <Route path="/css">css</Route>
+          <Route path="/layout">css</Route>
           <Route path="/structure">structure</Route>
           <Route path="/">
             <Home />

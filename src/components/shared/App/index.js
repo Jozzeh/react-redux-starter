@@ -10,6 +10,7 @@ import { store, persistor } from "../../../redux/store/store";
 // third, import components
 import Navigation from "../Navigation";
 import PageSwitch from "../PageSwitch";
+import Footer from "../Footer";
 
 const App = (props) => {
   return (
@@ -19,6 +20,7 @@ const App = (props) => {
           <Router>
             <Navigation />
             <PageSwitch />
+            <Footer />
           </Router>
         </div>
       </PersistGate>

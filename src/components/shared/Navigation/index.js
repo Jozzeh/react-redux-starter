@@ -37,8 +37,8 @@ const Navigation = props => {
           <li className={props.menu.active === "/structure" ? "nav__item--selected nav__item" : "nav__item"}>
             <Link onClick={() => {props.setActiveMenu("/structure")}} to="/structure">Structure</Link>
           </li>
-          <li className={props.menu.active === "/css" ? "nav__item--selected nav__item" : "nav__item"}>
-            <Link onClick={() => {props.setActiveMenu("/css")}} to="/css">CSS</Link>
+          <li className={props.menu.active === "/layout" ? "nav__item--selected nav__item" : "nav__item"}>
+            <Link onClick={() => {props.setActiveMenu("/layout")}} to="/css">CSS</Link>
           </li>
           <li className={props.menu.active === "/redux" ? "nav__item--selected nav__item" : "nav__item"}>
             <Link onClick={() => {props.setActiveMenu("/redux")}} to="/redux">State</Link>
