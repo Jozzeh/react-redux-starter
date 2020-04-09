@@ -5,6 +5,8 @@ import { Switch, Route } from "react-router-dom";
 
 import Home from "../../pages/Home";
 import Structure from "../../pages/Structure";
+import Layout from "../../pages/Layout";
+import Redux from "../../pages/Redux";
 
 const PageSwitch = () => {
   return (
@@ -13,8 +15,12 @@ const PageSwitch = () => {
         <Switch>
           <Route path="/testing">testing</Route>
           <Route path="/async">async</Route>
-          <Route path="/redux">state</Route>
-          <Route path="/layout">css</Route>
+          <Route path="/redux">
+            <Redux />
+          </Route>
+          <Route path="/layout">
+            <Layout />
+          </Route>
           <Route path="/structure">
             <Structure />
           </Route>

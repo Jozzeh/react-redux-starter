@@ -1,11 +1,11 @@
 import React from "react";
 import "./redux.style.css";
-import Chuck from "../../blocks/redux/Chuck";
+import Intro from "../../blocks/redux/Intro";
 
 const Redux = () => {
   return (
     <section className="redux">
-      <Chuck />
+      <Intro />
       <h2>Redux inpersistence</h2>
       <p>
         The menu has a redux reducer, but this is not persisted.
