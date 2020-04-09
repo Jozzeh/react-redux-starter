@@ -18,7 +18,8 @@ const General = (props) => {
   const elementGuides = [
     "Prop types should be used to check type",
     "Prop types should be used to set default values if necessairy",
-    "Event handling is not done in the elements"
+    "Event handling is not done in the elements",
+    "When using a design system, the elements folder can serve to test new components"
   ];
 
   return (
@@ -31,8 +32,17 @@ const General = (props) => {
       <Text content="The folder structure is as follows:" />
       <List items={foldersListItems} type="ul"/>
 
+      <Title type="h3" content="shared" />
+      <Text content="The shared folder contains component that are shared throughout the application. Example: main navigation, router, initial app component" />
+
+      <Title type="h3" content="pages" />
+      <Text content="Pages are the biggest component and it's pretty clear what they are... A page component represents one page in the application. Event handling can be in this component, but usually the events are handled in the blocks-components." />
+
+      <Title type="h3" content="blocks" />
+      <Text content="The blocks are a pieces of a page. This can be seen as the molecules & organisms of atomic design. You'll find sections of a web application in this folder. Also the business logic / event handling is usually done in these components." />
+
       <Title type="h3" content="elements" />
-      <Text content="The elements folder are the smallest components. This can be seen as the atoms of atomic design. You'll find buttons, inputfields, and other small components in this folder. Some guidelines:" />
+      <Text content="The elements folder contains the smallest components. This can be seen as the atoms of atomic design. You'll find buttons, inputfields, and other small components in this folder. Some guidelines:" />
       <List type="ul" items={elementGuides} />
     </div>
   );
