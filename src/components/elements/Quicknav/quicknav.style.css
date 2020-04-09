@@ -1,0 +1,37 @@
+.quicknav__inline {
+  text-align: center;
+  border-bottom: solid 1px #f1f1f1;
+  border-top: solid 1px #f1f1f1;
+  margin: 10px 0;
+}
+.quicknav__inline a {
+  display: inline-block;
+  margin: 5px 10px;
+  text-decoration: underline;
+  font-size: 12px;
+  font-weight: normal;
+  color: #000;
+}
+
+.quicknav__inline-fixed {
+  text-align: center;
+  position: fixed;
+  top: 0;
+}
+
+.quicknav__block {
+  text-align: left;
+}
+.quicknav__block a{
+  display: inline-block;
+  width: 100%;
+}
+
+.quicknav__inline-fixed {
+  text-align: left;
+  position: fixed;
+}
+.quicknav__block-fixed a{
+  display: inline-block;
+  width: 100%;
+}

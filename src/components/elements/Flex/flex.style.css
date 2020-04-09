@@ -9,3 +9,8 @@
 .flex-section__wrap {
   flex-wrap: wrap;
 }
+
+.flex-section__half{
+  width: calc(50% - 10px);
+  margin: 0 10px 0 0;
+}

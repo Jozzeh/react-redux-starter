@@ -38,10 +38,13 @@ const Navigation = props => {
             <Link onClick={() => {props.setActiveMenu("/structure")}} to="/structure">Structure</Link>
           </li>
           <li className={props.menu.active === "/layout" ? "nav__item--selected nav__item" : "nav__item"}>
-            <Link onClick={() => {props.setActiveMenu("/layout")}} to="/css">CSS</Link>
+            <Link onClick={() => {props.setActiveMenu("/layout")}} to="/layout">CSS</Link>
           </li>
           <li className={props.menu.active === "/redux" ? "nav__item--selected nav__item" : "nav__item"}>
             <Link onClick={() => {props.setActiveMenu("/redux")}} to="/redux">State</Link>
+          </li>
+          <li className={props.menu.active === "/async" ? "nav__item--selected nav__item" : "nav__item"}>
+            <Link onClick={() => {props.setActiveMenu("/async")}} to="/async">Async</Link>
           </li>
           <li className={props.menu.active === "/testing" ? "nav__item--selected nav__item" : "nav__item"}>
             <Link onClick={() => {props.setActiveMenu("/testing")}} to="/testing">Testing</Link>
