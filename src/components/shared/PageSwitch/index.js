@@ -7,6 +7,7 @@ import Home from "../../pages/Home";
 import Structure from "../../pages/Structure";
 import Layout from "../../pages/Layout";
 import Redux from "../../pages/Redux";
+import Async from "../../pages/Async";
 
 const PageSwitch = () => {
   return (
@@ -14,7 +15,9 @@ const PageSwitch = () => {
       <div className="main__container">
         <Switch>
           <Route path="/testing">testing</Route>
-          <Route path="/async">async</Route>
+          <Route path="/async">
+            <Async />
+          </Route>
           <Route path="/redux">
             <Redux />
           </Route>
